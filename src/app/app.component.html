@@ -20,85 +20,107 @@
  -->
 <style>
   .body {
+
   }
 
   .profilepic {
-    border-radius: 50%;
-    width: 300px;
-    height: 500px;
-    padding-left: 20px;
-    padding-top: 10px;
-    float:left;
+    border-radius: 0px;
+    height:15%;
+    width:15%;
+    text-align:center;
+    outline:1px solid black;
+    border-image-width:auto;
   }
   .profileInfo{
     
   }
 
   #opening {
-    background-color: beige;
+    background-image: url(http://ohiostatefb.io-media.com/media/venueview/images/NE_FullStadium.jpg);
   }
   .screenshot-left {
     float: left;
-    width: 50%;
+    width: 40%;
     overflow:auto;
+    margin-left:50px;
   }
   .screenshot-right{
     float:right;
-    width: 50%;
+    width: 42%;
     overflow:auto;
+    margin-right:50px;
+  }
+  #fullpage{
+    background-color:dimgrey;
+  }
+  .pageStart {
+    margin: 0px 50px 0px 50px;
+    background-image: url("assets/23.jpg");
+    background-size: cover;
+    outline: .5px solid black;
+  }
+  .projectsSect{
+    margin:0px 50px 0px 50px;
+    outline:.5px solid black;
+    height:800px;
+    background-color:whitesmoke;
+
   }
   
 </style>
-
 
 <md-toolbar color="primary">
   <span>William Matera</span>
   <!-- This fills the remaining space of the current row -->
   <span class="example-fill-remaining-space"></span>
   <span></span>
-
 </md-toolbar>
 
-
-
-
-
-
-    <div style="overflow:auto"><img class="profilepic" src="assets/GradPic.png" /> 
-    <br/>
-    <br/><br /><br /><br />
-    <h2 style="padding-left:20px">Front-End Developer and UX/UI designer, with practical experience in project management,
+<div id="fullpage">
+    <div class="pageStart" style="overflow:auto; text-align:center;"><br/><img class="profilepic" src="assets/gitpic.jpg" /> 
+      <br/><br/><br /><br /><br />
+      <h2 style="text-align:center">Front-End Developer and UX/UI designer, with practical experience in project management,
             branding strategy, and creative direction;
             devoted to functional programming and information architecture.</h2>
     </div>
+  <div class="projectsSect">
+    <br/>
+    <h1 style="text-align:center">Personal Projects</h1>
 
-    <br />
-<br />
-<div>
-  <h1 style="text-align:center">Personal Projects</h1>
-  <div stlye="padding-left:50px">
-    <md-card class='screenshot-left'>
-      <md-card-header>
-        <md-card-title>FisherLink</md-card-title>
-        <md-card-subtitle>A Course Registration System</md-card-subtitle>
-      </md-card-header>
-      <img md-card-image src="assets/FisherLinkSS.png">
-    </md-card>
-    <p style="float:left; padding:15px; width:300px;">FisherLink is a Student Registration application that utilizes the .NET framework and SQL Server</p>
+      <md-card class='screenshot-left'>
+        <md-card-header>
+          <md-card-title>FisherLink</md-card-title>
+          <md-card-subtitle>A Course Registration System</md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="assets/FisherLinkSS.png">
+        <md-card-content>
+          FisherLink is student registration application that ultilizes ASP.NET Core and SQL server. Both GoogleMaps API and Facebook Login Authentication API were implemented.
+        </md-card-content>
+        <br/>
+        <md-card-actions>
+          <button md-button onclick="location.href='https://fisherlinkweb.azurewebsites.net/'">Checkout FisherLink on Azure</button>
+          <button md-button onclick="location.href='https://github.com/BillMatera/Fisherlink/tree/master/Fisherlink/FisherLink/FisherLink'">View Source Code on Github</button>
+        </md-card-actions>
+      </md-card>
+
+      <md-card class="screenshot-right">
+        <md-card-header>
+          <md-card-title>Review4You!</md-card-title>
+          <md-card-subtitle>Search for businesses' in your Area</md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="assets/review4youSS.png">
+        <md-card-content>
+          Review4You! is a look up application that uses the python based Flask microframework. This application makes use of the Yelp Fusion API and GoogleMaps API. The user searches for places based on key terms combined with their zip code,  
+          and a google map is populated with markers based on yelp's results given your parameters. 
+        </md-card-content>
+        <md-card-actions>
+          <button md-button onclick="location.href='https://review4you.herokuapp.com/'">Checkout Review4You! on Heroku</button>
+          <button md-button onclick="location.href='https://github.com/BillMatera/review4you">View Source Code on Github</button>
+        </md-card-actions>
+      </md-card>
+    </div>
+
   </div>
-
-  <div>
-    <md-card class="screenshot-right">
-      <md-card-header>
-        <md-card-title>FisherLink</md-card-title>
-        <md-card-subtitle>A Course Registration System</md-card-subtitle>
-      </md-card-header>
-      <img md-card-image src="assets/review4youSS.png">
-    </md-card>
-    <p style="float:right;padding:15px; width:300px">Review4you! is a Places look up application that was authored using the Flask Microframework for python. The application populates a google map with markers based on your search results with information about each</p>
-  </div>
-</div>
-
 
 
 
