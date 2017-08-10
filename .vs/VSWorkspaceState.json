@@ -1,8 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\app"
+    "\\node_modules\\@angular\\material",
+    "\\node_modules\\@angular\\material\\typings",
+    "\\node_modules\\@angular\\material\\typings\\grid-list",
+    "\\node_modules\\@angular\\material\\typings\\icon",
+    "\\src",
+    "\\src\\app",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\src\\assets\\GradPic.png",
   "PreviewInSolutionExplorer": false
 }
