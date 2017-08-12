@@ -31,6 +31,7 @@
     "@covalent/highlight": "^1.0.0-beta.6",
     "@covalent/http": "^1.0.0-beta.6",
     "@covalent/markdown": "^1.0.0-beta.6",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.30",
     "core-js": "^2.4.1",
     "express": "^4.15.4",
     "rxjs": "^5.4.2",

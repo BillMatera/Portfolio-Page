@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\node_modules\\@ng-bootstrap\\ng-bootstrap",
+    "\\node_modules\\@ng-bootstrap\\ng-bootstrap\\carousel",
     "\\src",
     "\\src\\app",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\assets\\GradPic.png",
+  "SelectedNode": "\\src\\index.html",
   "PreviewInSolutionExplorer": false
 }

@@ -15,6 +15,7 @@ import { MdToolbarModule } from '@angular/material';
 import { MdTooltipModule } from '@angular/material';
 import { MdDialogModule } from '@angular/material';
 import { MdTabsModule } from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { MdTabsModule } from '@angular/material';
   imports: [
       BrowserModule,
       BrowserAnimationsModule,
+      NgbModule.forRoot(),
       CommonModule,
       MdCardModule,
       MdMenuModule,
