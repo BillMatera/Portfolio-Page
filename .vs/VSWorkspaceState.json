@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\node_modules\\@ng-bootstrap\\ng-bootstrap",
-    "\\node_modules\\@ng-bootstrap\\ng-bootstrap\\carousel",
     "\\src",
     "\\src\\app",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\index.html",
+  "SelectedNode": "\\src\\styles.css",
   "PreviewInSolutionExplorer": false
 }

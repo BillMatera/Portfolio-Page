@@ -18,6 +18,8 @@
   </li>
 </ul>
  -->
+ <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Alegreya">
 <style>
   .body {
 
@@ -39,47 +41,61 @@
   #opening {
     background-image: url(http://ohiostatefb.io-media.com/media/venueview/images/NE_FullStadium.jpg);
   }
+  
   .screenshot-left {
     float: left;
     width: 40%;
     overflow:auto;
     margin-left:50px;
+    box-shadow: 10px 10px 5px #888888;
   }
-  .screenshot-right{
+  
+  .screenshot-right {
     float:right;
     width: 42%;
     overflow:auto;
     margin-right:50px;
+    box-shadow: 10px 10px 5px #888888;
   }
   #fullpage{
     background-color:dimgrey;
   }
+  
   .pageStart {
     margin: 0px 50px 0px 50px;
     background-image: url("assets/23.jpg");
     background-size: cover;
     outline: .5px solid black;
   }
+  
   .projectsSect{
     margin:0px 50px 0px 50px;
     outline:.5px solid black;
-    height:800px;
+    height:1600px;
     background-color:whitesmoke;
-
   }
+  
+  .contactSect{
+    margin:0px 100px 0px 100px;
+    border:.25px solid black;
+    background-color: #C1E1A6;
+    height:450px; 
+    border-top:0px;
+  }
+  
   .navbar-wrapper {
     position: relative;
   }
-
+  
   .carousel {
     top: 0;
   }
-
+  
   .carousel-inner {
     width: 100%;
     overflow: hidden;
   }
-
+  
   .navbar {
     position: absolute;
     top: 0;
@@ -96,6 +112,24 @@
     height:90%;
     width:90%;
   }
+  footer{
+  color:#fff;
+  background-color:#aaa;
+  text-align:center;
+  box-shadow:0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+footer h3{margin-bottom:30px;color:#fff;
+}
+#footer-above{padding-top:50px;width:80%;
+}
+#footer-above div{margin-bottom:50px;width:250px;
+}
+#footer-above ul{padding:0;
+}
+#footer-above li{display:inline;
+}
+#footer-below{box-shadow:0px 0px 1px 1px rgba(0, 0, 0, 0.2);padding:25px 0;background-color:#722872;text-align:center;
+}
 </style>
 
 <div class="navbar-wrapper">
@@ -114,21 +148,6 @@
       <h4 style="color:black"> Aspiring developer with a passion for where Technology and Business intersect</h4>
     </div>
   </ng-template>
-  <ng-template ngbSlide>
-    <img class="d-none d-md-block img-fluid" src="/assets/fishStudents.png" alt="Random second slide">
-    <div class="carousel-caption d-none d-md-block img-fluid">
-      <h1 style="color:black"><i>About Me</i></h1>
-      <h4 style="color:black; margin-bottom:45px;">Strong Understanding of Back-End Development Combined with a Deep Interest in Everyday Users' Technology Experience.</h4>
-      <p style="color:black; margin-bottom:190px;">In my free time I enjoy playing with APIs and Vast Data Sets!</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img class="d-none d-md-block img-fluid" src="/assets/reviewSS.png" alt="Random third slide">
-    <div class="carousel-caption d-none d-md-block img-fluid">
-      <h3 style="color:black">Checkout Some of My Works Below!</h3>
-      <h4 style="color:black; margin-bottom:170px;">Now that you have seen some small screen shots of my apps, go forth and Explore them!</h4>
-    </div>
-  </ng-template>
 </ngb-carousel>
 
 
@@ -138,16 +157,25 @@
   <div class="projectsSect">
     <br/>
     <h1 style="text-align:center; font-weight:bold; ">Portfolio</h1>
-    <hr style="border-width:2px; display:flex; margin-left:30px; margin-right:30px;">
+    <hr style="border-width:2px; display:flex; margin-left:30px; margin-right:30px; border-color: black;">
 
-      <md-card class='screenshot-left'>
+      <md-card class='screenshot-left' style="box-shadow: 10px 10px 5px #888888; border-style:solid; border-width:.5px;">
         <md-card-header>
           <md-card-title>FisherLink</md-card-title>
           <md-card-subtitle>A Course Registration System. <b>Hosted on Azure</b></md-card-subtitle>
         </md-card-header>
         <img md-card-image src="assets/FisherLinkSS.png">
         <md-card-content>
-          FisherLink is student registration application that ultilizes ASP.NET Core and SQL server. Both GoogleMaps API and Facebook Login Authentication API were implemented.
+          FisherLink is student registration application that ultilizes ASP.NET Core and SQL server. <b>You may create, edit, and delete database entities
+          such as Students, Courses, Enrollments</b>. Both GoogleMaps API and Facebook Login Authentication API were implemented.
+          <h5 style="text-decoration: underline;"><b>Areas of Focus</b></h5>
+            <ul>
+                <li>ASP.NET Core & C#</li>
+                <li>Azure cloud hosting including SQL Server instance</li>
+                <li>MVC Razor view engine</li>
+                <li>Entity Framework & Migrations</li>
+                <li>Local Authentication & Authorization, plus Facebook Authentication</li>
+            </ul>  
         </md-card-content>
         <br/>
         <md-card-actions>
@@ -156,27 +184,122 @@
         </md-card-actions>
       </md-card>
 
-      <md-card class="screenshot-right">
+      <md-card class="screenshot-right" style="box-shadow: 10px 10px 5px #888888; border-style:solid; border-width:.5px;">
         <md-card-header>
           <md-card-title>Review4You!</md-card-title>
           <md-card-subtitle>Search for businesses' in your Area. <b>Hosted on Heroku</b></md-card-subtitle>
         </md-card-header>
-        <img md-card-image src="assets/review4youSS.png">
+        <img md-card-image src="assets/Review4you-Redesign.png">
         <md-card-content>
           Review4You! is a look up application that uses the python based Flask microframework. This application makes use of the Yelp Fusion API and GoogleMaps API. The user searches for places based on key terms combined with their zip code,  
-          and a google map is populated with markers based on yelp's results given your parameters. 
+          and a <b>google map is populated with markers and InfoBoxes</b> based on yelp's results given your parameters. 
+          <h5 style="text-decoration: underline;"><b>Areas of Focus</b></h5>
+            <ul>
+                <li>Python 3.6 & Flask MicroFramework</li>
+                <li>Jinja2 Template Engine</li>
+                <li>Http request to APIs : GET & POST</li>
+                <li>Handling and Accessing JSON object responses</li>
+                <li>oauth security for API requests</li>
+            </ul> 
         </md-card-content>
         <md-card-actions>
           <button md-button onclick="location.href='https://review4you.herokuapp.com/'" style="background-color:lightgray">Checkout Review4You! on Heroku</button>
           <button md-button onclick="location.href='https://github.com/BillMatera/review4you" style="background-color:forestgreen">View Source Code on Github</button>
         </md-card-actions>
       </md-card>
+      
+      <br/>
+      
+      <md-card class='screenshot-right' style="box-shadow: 10px 10px 5px #888888; border-style:solid; border-width:.5px;">
+        <md-card-header>
+          <md-card-title>Java Binary Tree Calculator</md-card-title>
+          <md-card-subtitle>An in-depth <b>Java</b> console application exploring Data Structures</md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="assets/JavaCalc.png">
+        <md-card-content>
+          A calculator that can evaluate expressions of arbitrary length, using a data structure known as a binary expression tree. 
+          It can perform any simple algebraic operation (+, -, *, /, %), and can handle expressions of any length properly by putting the expression into a binary expression tree and then evaluating the expression tree.
+          The process for evaluating expression trees is <b>recursive</b>.
+            <h5 style="text-decoration: underline;"><b>Areas of Focus</b></h5>
+            <ul>
+                <li>Java OOP </li>
+                <li>Custom Classes, Interfaces & Inheritance</li>
+                <li>Sorting and Searching through Binary Tree Data structures</li>
+                <li>File I/O</li>
+                <li>Practice with Recursion</li>
+            </ul>
+        </md-card-content>
+        <br/>
+        <md-card-actions>
+          <button md-button onclick="location.href='https://fisherlinkweb.azurewebsites.net/'" style="background-color:lightgray">Checkout FisherLink on Azure</button>
+          <button md-button onclick="location.href='https://github.com/BillMatera/Fisherlink/tree/master/Fisherlink/FisherLink/FisherLink'" style="background-color:forestgreen">View Source Code on Github</button>
+        </md-card-actions>
+      </md-card>
+      
+      <md-card class="screenshot-left" style="box-shadow: 10px 10px 5px #888888; border-style:solid; border-width:.5px;">
+        <md-card-header>
+          <md-card-title>James Gandolfini Tribute Page</md-card-title>
+          <md-card-subtitle>One of my first webpages <b>Hosted on Azure</b></md-card-subtitle>
+        </md-card-header>
+        <img md-card-image src="assets/TonySoprano.png">
+        <md-card-content>
+          Check out one of my first ever personal projects, a simple single page application paying respect to the <b>legend James Gandolfini</b>. Check out
+          Some information about the actor who was the heart and soul of the best American T.V. Drama series ever created!
+          <h5 style="text-decoration: underline;"><b>Areas of Focus</b></h5>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>Experience with HTML best practices and components</li>
+                <li>In-line CSS styling</li>
+                <li>THE BEST T.V. Show HBO ever created!</li>
+            </ul> 
+        </md-card-content>
+        <md-card-actions>
+          <button md-button onclick="location.href='http://gandolfinitribute.azurewebsites.net/'" style="background-color:lightgray">Checkout Tony Soprano on Azure</button>
+          <button md-button onclick="location.href='https://github.com/BillMatera/review4you" style="background-color:forestgreen">View Source Code on Github</button>
+        </md-card-actions>
+      </md-card>
+    
+  </div>
+  <div class="contactSect">
+    <h1 style="font-family: Alegreya; font-size: 75px; text-align:center; padding-top:50px; color:black;">Contact Me</h1>
+    <hr style="border-width:2px; display:flex; margin-left:30px; margin-right:30px; border-color:black;">
+    <div class="row">
+        <div class="col-lg-6">
+            <h5 style="margin-right:50px; margin-left:50px;">Please feel free to Reach out to me at any time! Wether it is to inquire more information about myself, interested in my resume, a conversation 
+            about code, some epic fan theory about Game of Thrones or even Fantasy Football talk, contact me at any time and I will be sure to respond quickly!</h5>
+        </div>
+        <div class="col-lg-6">
+            <h3 style="text-align:center;"><b>My Contact Info</b></h3>
+            <br/>
+            <h5>Email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        matera.3@osu.edu</h5>
+            <h5>Phone Number : (732) 682 1569</h5>
+            <button 
+            class="btn btn-default button3" type="submit" style="box-shadow: 10px 10px 5px #888888; border-style:solid; border-color:black; border-width:1px; background-color:lightgray; color:black;"><a href="mailto:matera.3@osu.edu?Subject=I stumbled upon your Portfolio" target="_top">Send me an Email!</a></button>
+        </div>    
+  </div>
+  </div>
+<footer>
+  <div id="footer-above" class="row">
+    <div class="col-lg-6" style="margin-left:60px;">
+      <h3>About this page</h3>
+      <p>Made with <b>Angular 4</b> and <b>Material Design Components</b></p>
+      <p>by Bill Matera.</p>
     </div>
+    <div class="col-lg-6;" style="margin-left:150px;">
+      <h3>My Web Footprint</h3>
+      <ul>
+        <li><a class="button social" href="https://www.linkedin.com/in/william-matera-osu/"><i class="fa fa-fw fa-linkedin fa-3x"></i></a></li>
+        <li><a class="button social" href="https://github.com/BillMatera"><i class="fa fa-fw fa-github fa-3x"></i></a></li>
+        <li><a class="button social" href="https://www.freecodecamp.org/billmatera"><i class="fa fa-free-code-camp fa-3x"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  
+
+
 
   
-  <i class="fa fa-github fa-spin fa-5x" aria-hidden="true"></i>
-
-  </div>
 
 
 
